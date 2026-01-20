@@ -1,0 +1,13 @@
+{{ if eq .chezmoi.hostname "goetia" }}
+output "DP-1" {
+    mode "2560x1440@239.970"
+    scale 1
+    transform "normal"
+}
+{{ else if eq .chezmoi.hostname "notoria" }}
+output "eDP-1" {
+		mode "2560x1600@165.000"
+    scale 1.5
+    transform "normal"
+}
+{{ end }}
